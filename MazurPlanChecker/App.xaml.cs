@@ -23,7 +23,7 @@ namespace MazurPlanChecker
             base.OnStartup(e);
             var bs = new AppBootstrapper<MainView>(() => { return VMS.TPS.Common.Model.API.Application.CreateApplication(); });
             //You can use the following to load a context (for debugging purposes)
-            args = ContextIO.ReadArgsFromFile(@"C: \Users\cwalker\Desktop\context.txt");
+            //args = ContextIO.ReadArgsFromFile(@"C: \Users\cwalker\Desktop\context.txt");
             //Might disable (uncomment) for plugin mode
             //bs.IsPatientSelectionEnabled = false;
             bs.Run(args);

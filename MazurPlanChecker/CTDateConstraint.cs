@@ -18,12 +18,14 @@ namespace MazurPlanChecker
         public ConstraintResult CanConstrain(PlanningItem pi)
         {
             var pq = new PQAsserter(pi);
+            //return pq.IsPlanSetup().HasImage().CumulativeResult;
             return pq.HasImage().CumulativeResult;
         }
 
         public ConstraintResult Constrain(PlanningItem pi)
         {
             var image = pi.GetImage();
+            //Facade object (duplicate) for unit testing 
             return Constrain(new F.Image(image));
         }
 
